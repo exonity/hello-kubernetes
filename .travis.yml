@@ -11,6 +11,6 @@ script:
   - ./gradlew build
 
 after_success:
-  - docker login -u $DOCKER_USER -p DOCKER_PASSWORD mangeiregistry.azurecr.io
+  - docker login mangeiregistry.azurecr.io -u $DOCKER_USER -p DOCKER_PASSWORD
   - docker build -t mangeiregistry.azurecr.io/mangei/hello-kubernetes:1.0.1 .
   - docker push mangeiregistry.azurecr.io/mangei/hello-kubernetes:1.0.1
