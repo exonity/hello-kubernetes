@@ -13,5 +13,5 @@ script:
 after_success:
   - docker login -u $DOCKER_USER -p DOCKER_PASSWORD
   - docker-compose build
-  - docker tag mangeiregistry.azurecr.io/mangei/hello-kubernetes:latest mangeiregistry.azurecr.io/mangei/hello-kubernetes:$TAG
-  - docker push mangeiregistry.azurecr.io/mangei/hello-kubernetes:$TAG
+  - docker tag mangeiregistry.azurecr.io/mangei/hello-kubernetes:latest mangeiregistry.azurecr.io/mangei/hello-kubernetes:1.0.1
+  - docker push mangeiregistry.azurecr.io/mangei/hello-kubernetes:1.0.1
